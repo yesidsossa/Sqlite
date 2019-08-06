@@ -19,7 +19,11 @@ class DetailActivity : AppCompatActivity() {
         Picasso
             .with(this)
             .load(producto.photo)
+            .placeholder(R.drawable.ic_launcher_background)
+            .error(R.drawable.abc_ic_star_black_16dp)
             .into(imgDetail)
+
+
         tvName.text = producto.name
         tvPrice.text = producto.price
         tvDescription.text = producto.description

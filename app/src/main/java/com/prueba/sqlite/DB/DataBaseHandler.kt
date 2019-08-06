@@ -74,13 +74,11 @@ class DataBaseHandler(context: Context, factory: SQLiteDatabase.CursorFactory?) 
     fun getAllProductsId(id: String): Product {
 
         val db = this.readableDatabase
-        val campos = arrayOf("id","name", "photo","description","price")
-        val args = arrayOf(id)
-        val c = db.query("$TABLE_NAME", campos, "id=", args, null, null, null)
+
+        val c = db.rawQuery("SELECT * FROM $TABLE_NAME WHERE id = 1", null)
 
         if(c.isFirst)
         {
-            c.moveToNext()
           return  Product(c.getInt(0),c.getString(1),c.getString(2),c.getString(3),c.getString(4))
         }
 
