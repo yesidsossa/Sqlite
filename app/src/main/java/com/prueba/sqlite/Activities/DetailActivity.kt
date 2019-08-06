@@ -14,7 +14,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         val dbHandler = DataBaseHandler(this, null)
-        var producto = dbHandler.getAllProductsId("producto1")
+        var producto = dbHandler.getAllProductsId("1")
 
         Picasso
             .with(this)

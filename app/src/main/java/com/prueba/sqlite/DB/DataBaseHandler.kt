@@ -85,7 +85,7 @@ class DataBaseHandler(context: Context, factory: SQLiteDatabase.CursorFactory?) 
         }
 
         db.close()
-        return  Product(1,"nada","http://lorempixel.com/500/500/food","nada","nada")
+        return  Product(1,"Nombre del producto: Ninguno","http://lorempixel.com/500/500/food","Descripcion:","Precio del producto: 0000")
     }
 
     companion object {
